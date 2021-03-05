@@ -1,0 +1,90 @@
+{
+  "project": {
+    "name": "cucumbertech.com",
+    "description": "Website for Cucumber Technology",
+    "author": "Connor Law",
+    "authors": [
+
+    ]
+  },
+  "repositories": [
+    {
+      "name": "special-repo",
+      "root": "http://localhost:2000/wb2/",
+      "token": "1se68f1s9e8sge6181394SNgiueeion"
+    }
+  ],
+  "domains": [
+    {
+      "name": "cucumbertech.com",
+      "archetype": "standard",
+      "dependencies": [
+        {
+          "id": "cutech/color-scheme-ocean/0.1"
+        },
+        {
+          "id": "private/ooga/0.1",
+          "password": "NBhwTtB7jU"
+        },
+        {
+          "id": "cutech/php/1.3.0",
+          "settings": {
+            "override-location": "./special-libs/"
+          }
+        }
+      ],
+      "tasks": {
+        "build": {
+          "variables": {
+            "LAST-MODIFIED": "\\%d%m%yy"
+          }
+        }
+      }
+    },
+    {
+      "name": "api.cucumbertech.com",
+      "archetype": "standard",
+      "apis": [
+        {
+          "name": "CuTech v1",
+          "version": "1",
+          "standard": "REST",
+          "documentation": {
+            "enabled": true,
+            "index-extension": ".md.wb2docs"
+          },
+          "dependencies": [
+            {
+              "id": "cutech/apilibs/0.1"
+            }
+          ]
+        },
+        {
+          "name": "CuTech v2",
+          "version": "2",
+          "standard": "REST"
+        }
+      ]
+    }
+  ],
+  "tasks": {
+    "build": {
+      "extensions":[
+        "html",
+        "css",
+        "js",
+        "json",
+        "php",
+        "scss"
+      ],
+      "link-replace": {
+        "http://cucumbertech.loop/*": "https://cucumbertech.com/*"
+      },
+      "variables": {
+        "COPYRIGHT-YEAR": "2021"
+      },
+      "condense": "true",
+      "copyright-notice": "local/copyright-notice.txt"
+    }
+  }
+}

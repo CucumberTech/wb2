@@ -1,0 +1,72 @@
+{
+  "name": "standard",
+  "author": "",
+  "description": "standard archetype suitable for most normal projects",
+  "properties": {
+    "public-dependencies": "public/assets/%{ASSET_TYPE}",
+    "private-dependencies": "private/",
+    "non-build-files": "local/"
+  },
+  "default_repositories": [],
+  "default_dependencies": [],
+  "default_tasks_config": {},
+  "default_file_structure": [
+    {
+      "name": "private",
+      "type": "folder",
+      "flags": [],
+      "files": []
+    },
+    {
+      "name": "public",
+      "type": "folder",
+      "flags": [],
+      "files": [
+        {
+          "name": "assets",
+          "type": "folder",
+          "flags": [],
+          "files": [
+            {
+              "name": "img",
+              "type": "folder",
+              "flags": [],
+              "files": []
+            },
+            {
+              "name": "style",
+              "type": "folder",
+              "flags": [],
+              "files": [
+                {
+                  "name": "base.css",
+                  "type": "file",
+                  "flags": [],
+                  "content": ""
+                }
+              ]
+            },
+            {
+              "name": "scripts",
+              "type": "folder",
+              "flags": [],
+              "files": []
+            }
+          ]
+        },
+        {
+          "name": "index.html",
+          "type": "file",
+          "flags": [],
+          "content": "<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>!!! TO-DO !!! TITlE</title>\n    <meta name=\"description\" content=\"\" />\n    <meta name=\"keywords\" content=\"\">\n    <link rel=\"stylesheet\" href=\"assets/style/base.css\">\n</head>\n\n<body>\n\n</body>\n\n</html>"
+        }
+      ]
+    },
+    {
+      "name": "local",
+      "type": "folder",
+      "flags": ["build-excluded"],
+      "files": []
+    }
+  ]
+}
